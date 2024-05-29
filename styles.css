@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+  background-color: #1a1a1a;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.clock {
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.time {
+  font-size: 6rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  background-image: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff);
+  -webkit-background-clip: text;
+  animation: glow 2s infinite linear;
+}
+
+@keyframes glow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.separator {
+  animation: none;
+  color: #ff00de;
+  text-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff00de;
+}
+
+.date {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  background-image: linear-gradient(45deg, #ff2600, #b8f600, #ff00d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s infinite linear;
+}
+
+.period {
+  font-size: 6rem;
+  background-image: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff);
+  -webkit-background-clip: text;
+  animation: glow 2s infinite linear;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .time {
+    font-size: 4rem;
+  }
+
+  .period {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .time {
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+
+  .period {
+    font-size: 3rem;
+  }
+
+  .date {
+    font-size: 1.5rem;
+  }
+}
